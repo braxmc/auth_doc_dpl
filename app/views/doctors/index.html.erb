@@ -1,0 +1,17 @@
+<%= button_to 'Log Out', destroy_user_session_path, method: :delete %>
+<h1>Doctors List</h1>
+
+<%= link_to 'Add Doctor', new_doctor_path()%>
+
+<% @doctors.each do |doctor| %>
+
+  <ul>
+
+    <%= link_to doctor.doctor_name, doctor_path(doctor.id) %>
+
+  </ul>
+<% end %>
+<br/>
+<br/>
+<%= link_to 'Patients List', patients_path() %>
+

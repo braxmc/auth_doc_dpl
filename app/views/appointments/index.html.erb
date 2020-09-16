@@ -1,0 +1,21 @@
+<h1>Appointments</h1>
+
+<%= link_to 'Add Appointment', new_doctor_appointment_path() %>
+<br/>
+<br/>
+<% @appointments.each do |appointment| %>
+<li>
+  <%= appointment.appointment_time %>, <%= appointment.appointment_type %>
+  <br/>
+  Patient ID - <%= appointment.patient_id %>
+<br/>
+  <%= link_to 'Edit', edit_doctor_appointment_path(@doctor, appointment) %>
+  <%= link_to 'Delete', doctor_appointment_path(@doctor, appointment), method: :delete %>
+</li>
+<br/>
+<br/>
+<% end %>
+<br/>
+<br/>
+<br/>
+<%= link_to 'Back To Doctor', doctor_path(@doctor) %>

@@ -1,0 +1,19 @@
+<h1>Patient List</h1>
+
+<%= link_to 'Add Patient', new_patient_path() %>
+
+<% @patients.each do |patient| %>
+
+<ul>
+
+  <%= link_to patient.full_name, patient_path(patient.id) %>
+  <br/>
+  Patient ID Number: <%= patient.id %>
+
+</ul>
+
+<% end %>
+<br/>
+<br/>
+
+<%= link_to 'Doctor List', doctors_path() %>

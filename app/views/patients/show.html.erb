@@ -1,0 +1,11 @@
+<h1> <%= @patient.full_name %> </h1>
+<h2>ID # - <%= @patient.id %> </h2>
+
+<%= link_to 'Edit Name', edit_patient_path(@patient) %>
+<br/>
+<br/>
+<%= link_to 'Delete Patient', patient_path(@patient.id), method: :delete%>
+<br/>
+<br/>
+<br/>
+<%= link_to 'Back To Patient List', patients_path() %>
