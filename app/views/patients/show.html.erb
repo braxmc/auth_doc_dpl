@@ -1,11 +1,16 @@
-<h1> <%= @patient.full_name %> </h1>
-<h2>ID # - <%= @patient.id %> </h2>
+<div id='button'>
+    <%= button_to 'Log Out', destroy_user_session_path, method: :delete %>
+</div>
+<h1 class='title'> <%= @patient.full_name %> </h1>
+<h2 class='title'>ID # - <%= @patient.id %> </h2>
 
-<%= link_to 'Edit Name', edit_patient_path(@patient) %>
-<br/>
-<br/>
-<%= link_to 'Delete Patient', patient_path(@patient.id), method: :delete%>
-<br/>
-<br/>
-<br/>
-<%= link_to 'Back To Patient List', patients_path() %>
+<div class='select'>
+  <%= link_to 'Edit Name', edit_patient_path(@patient) %>
+  <br/>
+  <br/>
+  <%= link_to 'Delete Patient', patient_path(@patient.id), method: :delete%>
+  <br/>
+  <br/>
+  <br/>
+  <%= link_to 'Back To Patient List', patients_path() %>
+</div>

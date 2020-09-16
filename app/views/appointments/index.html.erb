@@ -1,6 +1,13 @@
-<h1>Appointments</h1>
+<div id='button'>
+    <%= button_to 'Log Out', destroy_user_session_path, method: :delete %>
+</div>
 
-<%= link_to 'Add Appointment', new_doctor_appointment_path() %>
+<h1 class='title'>Appointments</h1>
+
+<div class='select'>
+  <%= link_to 'Add Appointment', new_doctor_appointment_path() %>
+</div>
+
 <br/>
 <br/>
 <% @appointments.each do |appointment| %>
@@ -9,8 +16,10 @@
   <br/>
   Patient ID - <%= appointment.patient_id %>
 <br/>
+<div class='list'>
   <%= link_to 'Edit', edit_doctor_appointment_path(@doctor, appointment) %>
   <%= link_to 'Delete', doctor_appointment_path(@doctor, appointment), method: :delete %>
+</div>
 </li>
 <br/>
 <br/>
@@ -18,4 +27,6 @@
 <br/>
 <br/>
 <br/>
-<%= link_to 'Back To Doctor', doctor_path(@doctor) %>
+<div class='select'>
+  <%= link_to 'Back To Doctor', doctor_path(@doctor) %>
+</div>

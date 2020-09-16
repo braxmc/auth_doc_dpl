@@ -1,17 +1,30 @@
-<%= button_to 'Log Out', destroy_user_session_path, method: :delete %>
-<h1>Doctors List</h1>
+<div>
 
-<%= link_to 'Add Doctor', new_doctor_path()%>
+  <div id='button'>
+    <%= button_to 'Log Out', destroy_user_session_path, method: :delete %>
+  </div>
 
-<% @doctors.each do |doctor| %>
+  <h1 class='title'>Doctors List</h1>
 
-  <ul>
+  <div class='body'>
+    <div class='select'>
+      <%= link_to 'Add Doctor', new_doctor_path()%>
+    </div>
+    <br/>
+    <% @doctors.each do |doctor| %>
 
-    <%= link_to doctor.doctor_name, doctor_path(doctor.id) %>
+      <ul>
+        <li class='list'>
+          <%= link_to doctor.doctor_name, doctor_path(doctor.id) %>
+        </li>
+      </ul>
+    <% end %>
+    <br/>
+    <br/>
+    <div class='select'>
+      <%= link_to 'Patients List', patients_path() %>
+    </div>
+  </div>
 
-  </ul>
-<% end %>
-<br/>
-<br/>
-<%= link_to 'Patients List', patients_path() %>
+</div>
 

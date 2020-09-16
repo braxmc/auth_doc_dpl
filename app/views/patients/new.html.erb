@@ -1,13 +1,25 @@
-<h1>Add Patient</h1>
+<div id='button'>
+    <%= button_to 'Log Out', destroy_user_session_path, method: :delete %>
+</div>
+<h1 class='title'>Add Patient</h1>
 
 <%= form_for @patient do |f| %>
-
-  <%= f.label :first_name %>
-  <%= f.text_field :first_name, require: true, placeholder: 'First Name' %>
-
-  <%= f.label :last_name %>
-  <%= f.text_field :last_name, require: true, placeholder: 'Last Name' %>
-
-  <%= f.submit %>
+  <div class='form'>
+    <%= f.label :first_name %>
+  </div>
+  <div class='form'>
+    <%= f.text_field :first_name, require: true, placeholder: 'First Name' %>
+  </div>
+  <br/>
+  <div class='form'>
+    <%= f.label :last_name %>
+  </div>
+  <div class='form'>
+    <%= f.text_field :last_name, require: true, placeholder: 'Last Name' %>
+  </div>
+  <br/>
+  <div class='form'>
+    <%= f.submit %>
+  </div>
 
 <% end %>

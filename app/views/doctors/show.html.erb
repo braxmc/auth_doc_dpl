@@ -1,16 +1,27 @@
-<h1> <%= @doctor.doctor_name %> </h1>
+<div id='button'>
+    <%= button_to 'Log Out', destroy_user_session_path, method: :delete %>
+</div>
+<h1 class='title'> <%= @doctor.doctor_name %> </h1>
 <br/>
-<h2> Expertise: <%= @doctor.doctor_type.capitalize %> </h2>
+<h2 class='title'> Expertise: <%= @doctor.doctor_type.capitalize %> </h2>
 
 
-<%= link_to 'Appointments', doctor_appointments_path(@doctor) %>
-<br/>
-<br/>
-<%= link_to 'Edit Doctor Info', edit_doctor_path(@doctor) %>
-<br/>
-<br/>
-<%= link_to 'Delete Doctor', doctor_path(@doctor), method: :delete %>
-<br/>
-<br/>
-<br/>
-<%= link_to 'Back To Doctor List', doctors_path() %>
+<div class='position'>
+  <div class='select'>
+    <%= link_to 'Appointments', doctor_appointments_path(@doctor) %>
+    <br/>
+    <br/>
+  </div>
+  <div class='list'>
+    <%= link_to 'Edit Doctor Info', edit_doctor_path(@doctor) %>
+    <br/>
+    <br/>
+    <%= link_to 'Delete Doctor', doctor_path(@doctor), method: :delete %>
+  </div>
+    <br/>
+    <br/>
+    <br/>
+  <div class='select'>
+    <%= link_to 'Back To Doctor List', doctors_path() %>
+  </div>
+</div>

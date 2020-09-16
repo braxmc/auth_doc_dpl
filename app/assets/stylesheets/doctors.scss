@@ -19,3 +19,33 @@
   background-color: #f8d7da;
   border-color: #f5c6cb;
 }
+.title {
+  display: flex;
+  justify-content: center;
+}
+.select {
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+.list {
+  text-decoration: underline;
+}
+
+.position {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+}
+
+#button {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+

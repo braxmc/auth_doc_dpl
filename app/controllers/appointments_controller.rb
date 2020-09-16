@@ -23,6 +23,7 @@ class AppointmentsController < ApplicationController
   end
 
   def edit
+    @patients = Patient.all
   end
 
   def update

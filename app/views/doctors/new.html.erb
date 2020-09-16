@@ -1,13 +1,24 @@
-<h1>Add Doctor</h1>
+<div id='button'>
+    <%= button_to 'Log Out', destroy_user_session_path, method: :delete %>
+</div>
+<h1 class='title'>Add Doctor</h1>
 
 <%= form_for @doctor do |f| %>
-
+<div class='form'>
   <%= f.label :doctor_name %>
+</div>
+<div class='form'>
   <%= f.text_field :doctor_name, required: true, placeholder: 'Dr. (Last Name)'%>
-
+</div>
+<br/>
+<div class='form'>
   <%= f.label :doctor_type %>
+</div>
+<div class='form'>
   <%= f.text_field :doctor_type, required: true, placeholder: 'Doctor Type' %>
-
+</div>
+<br/>
+<div class='form'>
   <%= f.submit %>
-
+</div>
 <% end %>
